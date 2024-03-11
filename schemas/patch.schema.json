@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:ietf:params:scim:api:messages:2.0:PatchOp",
+  "title": "PatchOp",
+  "description": "Patch operation",
+  "type": "object",
+  "properties": {
+    "Operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "A single patch operation",
+        "properties": {
+          "op": {
+            "type": "string",
+            "enum": ["add", "remove", "replace"]
+          },
+          "path": {
+            "type": "string",
+            "description": "The \"path\" attribute value is a String containing an attribute path describing the target of the operation.  The \"path\" attribute is OPTIONAL for \"add\" and \"replace\" and is REQUIRED for \"remove\" operations."
+          },
+          "value": {
+            "type": "object",
+            "description": "Value to be added at the specified path"
+          }
+        }
+      }
+    }
+  },
+  "required": ["Operations"]
+}

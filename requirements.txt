@@ -1,0 +1,10 @@
+pytest==8.0.0
+pytest-order==1.2.0
+quart==0.19.4
+jsonschema==4.21.1
+requests==2.31.0
+abnf==2.2.0
+mypy==1.8.0
+types-jsonschema==4.21.0.20240118
+types-requests==2.31.0
+toml==0.10.2
